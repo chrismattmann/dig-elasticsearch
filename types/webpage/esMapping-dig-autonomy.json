@@ -1,0 +1,256 @@
+{
+    "dig-autonomy-05": {
+        "mappings": {
+            "article": {
+                "properties": {
+                    "@context": {
+                        "index": "no",
+                        "type": "string"
+                    },
+                    "a": {
+                        "index": "not_analyzed",
+                        "type": "string"
+                    },
+                    "author": {
+                        "properties": {
+                            "a": {
+                                "index": "not_analyzed",
+                                "type": "string"
+                            },
+                            "email": {
+                                "index": "not_analyzed",
+                                "type": "string"
+                            },
+                            "isAuthorOf": {
+                                "index": "not_analyzed",
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "uri": {
+                                "index": "not_analyzed",
+                                "type": "string"
+                            }
+                        },
+                        "type": "nested"
+                    },
+                    "citation": {
+                        "properties": {
+                            "a": {
+                                "index": "no",
+                                "type": "string"
+                            },
+                            "author": {
+                                "properties": {
+                                    "a": {
+                                        "index": "no",
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "index": "no",
+                                        "type": "string"
+                                    },
+                                    "uri": {
+                                        "index": "no",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "nested"
+                            },
+                            "datePublished": {
+                                "format": "YYYY-MM-DD HH:mmZ||YYYY-MM-DD||YYYY-MM||YYYY",
+                                "index": "no",
+                                "type": "date"
+                            },
+                            "isCitationOf": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "index": "no",
+                                "type": "string"
+                            },
+                            "uri": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "nested"
+                    },
+                    "datePublished": {
+                        "format": "dateOptionalTime",
+                        "type": "date"
+                    },
+                    "isCitationOf": {
+                        "properties": {
+                            "a": {
+                                "type": "string"
+                            },
+                            "citation": {
+                                "type": "string"
+                            },
+                            "uri": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "keywords": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "sourceOrganization": {
+                        "properties": {
+                            "a": {
+                                "index": "not_analyzed",
+                                "type": "string"
+                            },
+                            "location": {
+                                "properties": {
+                                    "a": {
+                                        "index": "not_analyzed",
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "nested"
+                            },
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "nested"
+                    },
+                    "text": {
+                        "analyzer": "english",
+                        "type": "string"
+                    },
+                    "uri": {
+                        "index": "not_analyzed",
+                        "type": "string"
+                    }
+                }
+            },
+            "author": {
+                "properties": {
+                    "@context": {
+                        "index": "no",
+                        "type": "string"
+                    },
+                    "a": {
+                        "index": "not_analyzed",
+                        "type": "string"
+                    },
+                    "email": {
+                        "index": "not_analyzed",
+                        "type": "string"
+                    },
+                    "isAuthorOf": {
+                        "properties": {
+                            "a": {
+                                "index": "not_analyzed",
+                                "type": "string"
+                            },
+                            "author": {
+                                "type": "string"
+                            },
+                            "citation": {
+                                "properties": {
+                                    "a": {
+                                        "index": "no",
+                                        "type": "string"
+                                    },
+                                    "author": {
+                                        "properties": {
+                                            "a": {
+                                                "index": "no",
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "index": "no",
+                                                "type": "string"
+                                            },
+                                            "uri": {
+                                                "index": "no",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "nested"
+                                    },
+                                    "datePublished": {
+                                        "format": "YYYY-MM-DD HH:mmZ||YYYY-MM-DD||YYYY-MM||YYYY",
+                                        "index": "no",
+                                        "type": "date"
+                                    },
+                                    "title": {
+                                        "index": "no",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "nested"
+                            },
+                            "datePublished": {
+                                "format": "dateOptionalTime",
+                                "type": "date"
+                            },
+                            "keywords": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "sourceOrganization": {
+                                "properties": {
+                                    "a": {
+                                        "index": "not_analyzed",
+                                        "type": "string"
+                                    },
+                                    "location": {
+                                        "properties": {
+                                            "a": {
+                                                "index": "not_analyzed",
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "nested"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "nested"
+                            },
+                            "text": {
+                                "analyzer": "english",
+                                "type": "string"
+                            },
+                            "uri": {
+                                "index": "not_analyzed",
+                                "type": "string"
+                            }
+                        },
+                        "type": "nested"
+                    },
+                    "name": {
+                        "fields": {
+                            "raw": {
+                                "index": "not_analyzed",
+                                "type": "string"
+                            }
+                        },
+                        "type": "string"
+                    },
+                    "uri": {
+                        "index": "not_analyzed",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
